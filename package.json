@@ -1,0 +1,42 @@
+{
+	"name": "react-sidebar-jira",
+	"private": true,
+	"sideEffects": false,
+	"version": "1.0.0",
+	"license": "MIT License",
+	"scripts": {
+		"build": "remix build",
+		"dev": "remix dev",
+		"start": "remix-serve build"
+	},
+	"dependencies": {
+		"@remix-run/node": "1.15.0",
+		"@remix-run/react": "1.15.0",
+		"@remix-run/serve": "1.15.0",
+		"isbot": "3.6.10",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@remix-run/dev": "1.15.0",
+		"@remix-run/eslint-config": "1.15.0",
+		"eslint": "8.39.0",
+		"prettier": "2.8.8"
+	},
+	"engines": {
+		"node": ">=18",
+		"npm": ">=8"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
