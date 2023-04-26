@@ -29,12 +29,12 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 
-// app/entry.server.jsx
-var entry_server_exports = {};
-__export(entry_server_exports, {
+// node_modules/@remix-run/dev/dist/config/defaults/node/entry.server.react-stream.tsx
+var entry_server_react_stream_exports = {};
+__export(entry_server_react_stream_exports, {
   default: () => handleRequest
 });
-var import_node_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_isbot = __toESM(require("isbot")), import_server = require("react-dom/server"), import_jsx_runtime = require("react/jsx-runtime"), ABORT_DELAY = 5e3;
+var import_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_isbot = __toESM(require("isbot")), import_server = require("react-dom/server"), import_jsx_runtime = require("react/jsx-runtime"), ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return (0, import_isbot.default)(request.headers.get("user-agent")) ? handleBotRequest(
     request,
@@ -61,7 +61,7 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
       ),
       {
         onAllReady() {
-          let body = new import_node_stream.PassThrough();
+          let body = new import_stream.PassThrough();
           responseHeaders.set("Content-Type", "text/html"), resolve(
             new import_node.Response(body, {
               headers: responseHeaders,
@@ -93,7 +93,7 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
       ),
       {
         onShellReady() {
-          let body = new import_node_stream.PassThrough();
+          let body = new import_stream.PassThrough();
           responseHeaders.set("Content-Type", "text/html"), resolve(
             new import_node.Response(body, {
               headers: responseHeaders,
@@ -142,39 +142,16 @@ __export(index_exports, {
   default: () => Index,
   meta: () => meta
 });
-var import_jsx_runtime3 = require("react/jsx-runtime"), meta = () => [{ title: "New Remix App" }];
+var import_jsx_runtime3 = require("react/jsx-runtime"), meta = () => [{ title: "Remix Sidebar Jira" }];
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { style: { fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Welcome to Remix" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("ul", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-        "a",
-        {
-          target: "_blank",
-          href: "https://remix.run/tutorials/blog",
-          rel: "noreferrer",
-          children: "15m Quickstart Blog Tutorial"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-        "a",
-        {
-          target: "_blank",
-          href: "https://remix.run/tutorials/jokes",
-          rel: "noreferrer",
-          children: "Deep Dive Jokes App Tutorial"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { target: "_blank", href: "https://remix.run/docs", rel: "noreferrer", children: "Remix Docs" }) })
-    ] })
-  ] });
+  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Bienvenido a Remix Sidebar Jira" }) });
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "35cded22", entry: { module: "/build/entry.client-SO3SZNBI.js", imports: ["/build/_shared/chunk-AOYLK2HV.js", "/build/_shared/chunk-SFIXD4SY.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-CGHLOBLB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-NQ3UBG5A.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-35CDED22.js" };
+var assets_manifest_default = { version: "d49f4081", entry: { module: "/build/entry.client-SO3SZNBI.js", imports: ["/build/_shared/chunk-AOYLK2HV.js", "/build/_shared/chunk-SFIXD4SY.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-CGHLOBLB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-LA3TJCG5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-D49F4081.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var assetsBuildDirectory = "public\\build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var assetsBuildDirectory = "public\\build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_react_stream_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,
