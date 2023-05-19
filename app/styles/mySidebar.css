@@ -1,0 +1,51 @@
+.my-sidebar {
+  --size-min: 20px;
+  --size-default: 240px;
+  --size-max: 535px;
+  --color-sidebar: #161a1d;
+
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  min-width: var(--size-min);
+  max-width: var(--size-max);
+  background-color: var(--color-sidebar);
+}
+
+.my-sidebar.closed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--size-min) !important;
+  height: 100%;
+}
+
+.my-sidebar.closed.animable {
+  transition: width 180ms ease;
+}
+
+.my-sidebar.closed.animable:hover {
+  width: var(--size-default) !important;
+}
+
+.my-sidebar .handle {
+  --color-handle: rgba(166, 197, 226, 0.161);
+
+  position: absolute;
+  z-index: 10;
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-handle);
+  transition-duration: 220ms;
+  transition-property: background-color, right;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.my-sidebar:not(.closed) .handle:is(:hover, :active) {
+  --color-active: #579dff;
+
+  background-color: var(--color-active);
+  cursor: ew-resize;
+}

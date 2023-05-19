@@ -6,18 +6,41 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
+import { DICTIONARY, PALETTE } from '@/constants'
+import globalStyles from '@/styles/global.css'
+import homeStyles from '@/styles/home.css'
 
-export default function App() {
+//? It's necessary for the global state and style config
+import { SidebarProvider } from './components/MySidebar/contexts'
+import mySidebarStyles from '@/styles/mySidebar.css'
+
+export const meta = () => {
+  return [{ title: DICTIONARY.META_TITLE }]
+}
+
+export const links = () => {
+  return [
+    { rel: 'stylesheet', href: globalStyles },
+    { rel: 'stylesheet', href: mySidebarStyles },
+    { rel: 'stylesheet', href: homeStyles },
+  ]
+}
+
+const App = () => {
   return (
     <html lang='en'>
       <head>
-        <meta charSet='utf-8' />
-        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <meta charSet='UTF-8' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='theme-color' content={PALETTE.APP} />
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
+        <SidebarProvider>
+          <Outlet />
+        </SidebarProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
@@ -25,3 +48,5 @@ export default function App() {
     </html>
   )
 }
+
+export default App

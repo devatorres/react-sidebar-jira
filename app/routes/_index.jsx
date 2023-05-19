@@ -1,11 +1,13 @@
-export const meta = () => {
-  return [{ title: 'Remix Sidebar Jira' }]
-}
+import Home from '@/components/Home'
+import MySidebar from '@/components/MySidebar'
 
-export default function Index() {
+const Index = () => {
   return (
-    <div>
-      <h1>Bienvenido a Remix Sidebar Jira</h1>
+    <div id='root'>
+      <MySidebar />
+      <Home />
     </div>
   )
 }
+
+export default Index

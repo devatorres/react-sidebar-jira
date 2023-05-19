@@ -5,12 +5,11 @@
 ![Tag](https://img.shields.io/badge/npm%208.19.2-c53635?style=flat-square)
 ![Tag](https://img.shields.io/badge/Prettier-c693c6?style=flat-square)
 ![Tag](https://img.shields.io/badge/React%2018-61d9fb?style=flat-square)
-![Tag](https://img.shields.io/badge/Remix-646cff?style=flat-square)
 ![Tag](https://img.shields.io/badge/Website-fbbf47?style=flat-square)
 
 ## 📋 Descripción
 
-Proyecto simple donde se imita el sidebar de Jira de manera que se pueda reusar en otros proyectos gracias a ser componentizado.
+Proyecto simple donde se imita el sidebar de Jira de manera que se pueda reusar en otros proyectos gracias a ser componentizado y nativo de React.
 
 ## 🔨 Cómo arrancarlo
 
