@@ -10,11 +10,14 @@ const useSidebar = (sidebarRef) => {
     const newSidebarData = { isSidebarOpen: true, size: SIDEBAR.SIZE_DEFAULT }
     setSidebarData(newSidebarData)
     setSidebarDataStorage(newSidebarData)
+    _putWidth(SIDEBAR.SIZE_DEFAULT)
     await _removeAnimable()
   }
 
   const closeSidebar = async () => {
     const newSidebarData = { isSidebarOpen: false, size: SIDEBAR.SIZE_MIN }
+
+    _stopResize()
     setSidebarData(newSidebarData)
     setSidebarDataStorage(newSidebarData)
     await _addAnimable()
@@ -54,7 +57,8 @@ const useSidebar = (sidebarRef) => {
     storage ? _putState(storage) : _putDefaultStorage()
   }
 
-  const _putState = (storage) => {
+  const _putState = async (storage) => {
+    if (!storage.isSidebarOpen) await _addAnimable()
     setSidebarData({ ...storage })
     _putWidth(storage.size)
   }

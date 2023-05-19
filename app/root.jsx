@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react'
 import { DICTIONARY, PALETTE } from '@/constants'
+import { ThemeProvider } from '@/contexts'
 import globalStyles from '@/styles/global.css'
 import homeStyles from '@/styles/home.css'
 
@@ -38,9 +39,11 @@ const App = () => {
         <Links />
       </head>
       <body>
-        <SidebarProvider>
-          <Outlet />
-        </SidebarProvider>
+        <ThemeProvider>
+          <SidebarProvider>
+            <Outlet />
+          </SidebarProvider>
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

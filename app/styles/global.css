@@ -8,6 +8,14 @@
 }
 
 :root {
+  --color-app: #ffffff;
+}
+
+:root[data-theme='light'] {
+  --color-app: #ffffff;
+}
+
+:root[data-theme='dark'] {
   --color-app: #1d2125;
 }
 
