@@ -10,7 +10,8 @@
     "start": "cross-env NODE_ENV=production netlify dev"
   },
   "dependencies": {
-    "@netlify/functions": "1.4.0",
+    "@netlify/functions": "1.6.0",
+    "@netlify/plugin-nextjs": "4.37.1",
     "@remix-run/css-bundle": "1.16.1",
     "@remix-run/netlify": "1.16.1",
     "@remix-run/node": "1.16.1",
@@ -24,7 +25,7 @@
     "@remix-run/dev": "1.16.1",
     "@remix-run/eslint-config": "1.16.1",
     "@remix-run/serve": "1.16.1",
-    "eslint": "8.40.0",
+    "eslint": "8.41.0",
     "prettier": "2.8.8"
   },
   "engines": {
