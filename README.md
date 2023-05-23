@@ -9,7 +9,7 @@
 
 ## 📋 Descripción
 
-Proyecto simple donde se imita el sidebar de Jira de manera que se pueda reusar en otros proyectos gracias a ser componentizado y nativo de React.
+Proyecto simple donde se imita el sidebar de Jira de manera que se pueda reusar en otros proyectos gracias a ser componetizado y nativo de React.
 
 ## 🔨 Cómo arrancarlo
 
