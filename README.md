@@ -1,4 +1,4 @@
-# react-sidebar-jira [![Netlify Status](https://api.netlify.com/api/v1/badges/050480a2-f008-42e7-96fa-e50e979de93f/deploy-status)](https://app.netlify.com/sites/majestic-pavlova-7bca7a/deploys)
+# react-sidebar-jira [![Netlify Status](https://api.netlify.com/api/v1/badges/0ded0e71-0e40-4fb8-a618-6966fc0ec37d/deploy-status)](https://app.netlify.com/sites/helpful-squirrel-3409ce/deploys)
 
 ![Tag](https://img.shields.io/badge/CSS3-f79400?style=flat-square)
 ![Tag](https://img.shields.io/badge/Component-1b1b1b?style=flat-square)
@@ -13,6 +13,6 @@ Proyecto simple donde se imita el sidebar de Jira de manera que se pueda reusar 
 
 ## 🔨 Cómo arrancarlo
 
-Hay una posibilidad de ver una preview desplegada en _Netlify_ [https://majestic-pavlova-7bca7a.netlify.app/](https://majestic-pavlova-7bca7a.netlify.app/). Pero como programador seguro que llama más la atención usar un poco de npm 😉. Es tan sencillo como clonar el proyecto `git clone <url>`, instalar las dependencias `npm install` y ejecutarlo `npm run dev`.
+Hay una posibilidad de ver una preview desplegada en _Netlify_ [https://helpful-squirrel-3409ce.netlify.app/](https://helpful-squirrel-3409ce.netlify.app/). Pero como programador seguro que llama más la atención usar un poco de npm 😉. Es tan sencillo como clonar el proyecto `git clone <url>`, instalar las dependencias `npm install` y ejecutarlo `npm run dev`.
 
 ## Espero que os guste, dale alguna ⭐!
