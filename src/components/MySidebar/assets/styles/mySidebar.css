@@ -40,7 +40,7 @@
   left: 0;
   width: var(--size-min) !important;
   height: 100%;
-  z-index: 15;
+  z-index: 9985;
 }
 
 .my-sidebar.closed.animable {
@@ -60,7 +60,13 @@
   top: 0;
   bottom: 0;
   right: calc(-1 * calc(var(--size-area) - var(--size-handle)));
-  z-index: 20;
+  z-index: 9990;
+  transition: background-color 180ms ease;
+}
+
+.my-sidebar > .resize-area.debug-visible {
+  --color-debug: rgba(248, 116, 98, 0.15);
+  background-color: var(--color-debug);
 }
 
 .my-sidebar:not(.closed) > .resize-area {
@@ -76,7 +82,7 @@
   left: 0;
   width: var(--size-handle);
   background-color: var(--color-handle);
-  z-index: 25;
+  z-index: 9995;
   transition: background-color 220ms cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -86,14 +92,14 @@
 
 .my-sidebar > .button-resize {
   --top-distance: 32px;
-  --left-distance: -10px;
+  --right-distance: -10px;
   --size-button: 24px;
 
   appearance: none;
   user-select: none;
   position: absolute;
   top: var(--top-distance);
-  right: var(--left-distance);
+  right: var(--right-distance);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +111,7 @@
   border: none;
   opacity: 1;
   cursor: pointer;
-  z-index: 30;
+  z-index: 9999;
   transition-property: background-color, opacity;
   transition-duration: 180ms;
   transition-timing-function: ease;

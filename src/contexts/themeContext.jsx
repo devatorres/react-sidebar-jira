@@ -5,7 +5,16 @@ import { getThemeDataStorage, setThemeDataStorage } from '../utils'
 export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(THEME.LIGHT)
+  const [theme, setTheme] = useState(THEME.DARK)
+
+  const isDark = () => theme === THEME.DARK
+
+  const toggleTheme = () => {
+    const newTheme = theme === THEME.DARK ? THEME.LIGHT : THEME.DARK
+    setTheme(newTheme)
+    setThemeDataStorage(newTheme)
+    _putTheme(newTheme)
+  }
 
   const init = async () => {
     const theme = await getThemeDataStorage()
@@ -14,10 +23,12 @@ export const ThemeProvider = ({ children }) => {
 
   const _putState = (theme) => {
     setTheme(theme)
+    setThemeDataStorage(theme)
     _putTheme(theme)
   }
 
   const _putDefaultStorage = () => {
+    setTheme(STORAGE.VALUE_DEFAULT)
     setThemeDataStorage(STORAGE.VALUE_DEFAULT)
     _putTheme(STORAGE.VALUE_DEFAULT)
   }
@@ -32,7 +43,7 @@ export const ThemeProvider = ({ children }) => {
   }, [])
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, isDark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )

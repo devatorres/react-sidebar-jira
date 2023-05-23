@@ -1,3 +1,60 @@
 .dashboard {
   flex: 1;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.dashboard.big-space {
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+.dashboard.small-space {
+  padding: 2rem;
+}
+
+.dashboard h1 {
+  font-size: 3.2rem;
+  color: var(--color-title);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard p {
+  font-size: 1.4rem;
+  color: var(--color-content);
+  margin-bottom: 2rem;
+}
+
+.dashboard ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  width: 100%;
+  gap: 1.25rem;
+  margin-bottom: 4rem;
+}
+
+.dashboard ul li {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 280px;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--color-border);
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--color-title);
+  font-weight: 500;
+}
+
+.dashboard ul.small li {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.dashboard ul li svg {
+  align-self: center;
+  margin-bottom: 0.2rem;
+  stroke: var(--color-content);
 }

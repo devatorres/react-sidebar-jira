@@ -9,11 +9,20 @@ body {
   min-height: 100vh;
   font-size: 16px;
   background-color: transparent;
+  overflow: hidden auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 div[id='root'] {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+div[id='home'] {
   display: flex;
   flex-flow: row nowrap;
   width: 100vw;

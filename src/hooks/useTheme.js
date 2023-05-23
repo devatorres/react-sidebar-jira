@@ -2,11 +2,9 @@ import { useContext } from 'react'
 import { ThemeContext } from '../contexts'
 
 const useTheme = () => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, isDark, toggleTheme } = useContext(ThemeContext)
 
-  const changeTheme = () => {}
-
-  return { theme, changeTheme }
+  return { theme, isDark, toggleTheme }
 }
 
 export default useTheme

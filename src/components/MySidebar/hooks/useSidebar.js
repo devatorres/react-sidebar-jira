@@ -3,7 +3,7 @@ import { SIDEBAR, STORAGE } from '../constants'
 import { SidebarContext } from '../contexts'
 import { getSidebarDataStorage, setSidebarDataStorage } from '../utils'
 
-const useSidebar = (sidebarRef) => {
+const useSidebar = (sidebarRef = undefined) => {
   const { sidebarData, setSidebarData } = useContext(SidebarContext)
 
   const openSidebar = async () => {
@@ -34,6 +34,7 @@ const useSidebar = (sidebarRef) => {
   }
 
   const _resizing = (e) => {
+    if (!sidebarRef) return undefined
     let newWidth = e.clientX - sidebarRef.current.offsetLeft
 
     if (!sidebarData.isSidebarOpen) return undefined
@@ -49,6 +50,7 @@ const useSidebar = (sidebarRef) => {
   }
 
   const _putWidth = (newWidth) => {
+    if (!sidebarRef) return undefined
     sidebarRef.current.style.width = `${newWidth}px`
   }
 
@@ -69,6 +71,8 @@ const useSidebar = (sidebarRef) => {
   }
 
   const _addAnimable = () => {
+    if (!sidebarRef) return undefined
+
     return Promise.resolve(
       setTimeout(() => {
         sidebarRef.current.classList.add('animable')
@@ -77,6 +81,7 @@ const useSidebar = (sidebarRef) => {
   }
 
   const _removeAnimable = () => {
+    if (!sidebarRef) return undefined
     return Promise.resolve(sidebarRef.current.classList.remove('animable'))
   }
 

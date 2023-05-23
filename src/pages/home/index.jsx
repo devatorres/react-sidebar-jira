@@ -5,7 +5,7 @@ import MySidebar from '../../components/MySidebar'
 
 const Home = () => {
   return (
-    <div id="root">
+    <div id="home">
       <MySidebar />
       <Dashboard />
     </div>

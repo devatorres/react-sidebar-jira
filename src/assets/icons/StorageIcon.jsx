@@ -1,21 +1,23 @@
-export const ChevronRightIcon = ({
+export const StorageIcon = ({
   className = '',
   stroke = 'currentColor',
   size = '24'
 }) => {
   return (
     <svg
-      className={`icon-chevron-right ${className}`}
+      className={`icon-storage ${className}`}
       width={size}
       height={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       stroke={stroke}
-      strokeWidth="4"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round">
-      <path d="M9 6l6 6l-6 6" />
+      <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0"></path>
+      <path d="M4 6v6a8 3 0 0 0 16 0v-6"></path>
+      <path d="M4 12v6a8 3 0 0 0 16 0v-6"></path>
     </svg>
   )
 }
