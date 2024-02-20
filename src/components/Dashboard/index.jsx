@@ -21,7 +21,7 @@ const Dashboard = () => {
   const { isVisible, toggleVisibility } = useDebug()
 
   return (
-    <div className={`dashboard ${isSidebarOpen ? 'small-space' : 'big-space'}`}>
+    <div className="dashboard" data-space={isSidebarOpen ? 'small' : 'big'}>
       <h1>React Sidebar Jira</h1>
       <p>En este proyecto se presenta un componente...</p>
       <ul>

@@ -1,11 +1,11 @@
 export const ChevronRightIcon = ({
-  className = '',
   stroke = 'currentColor',
-  size = '24'
+  size = '24',
+  state = 'normal'
 }) => {
   return (
     <svg
-      className={`icon-chevron-right ${className}`}
+      className="icon-chevron-right"
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -14,7 +14,8 @@ export const ChevronRightIcon = ({
       stroke={stroke}
       strokeWidth="4"
       strokeLinecap="round"
-      strokeLinejoin="round">
+      strokeLinejoin="round"
+      data-state={state}>
       <path d="M9 6l6 6l-6 6" />
     </svg>
   )
