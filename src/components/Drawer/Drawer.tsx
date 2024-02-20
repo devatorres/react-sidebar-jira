@@ -2,16 +2,19 @@ import { useRef } from 'react'
 import { useSidebar } from './hooks'
 import './Drawer.css'
 
-export const Drawer = () => {
-  const sidebarRef = useRef(null)
-  const { isSidebarOpen, resizeSidebar, openSidebar, closeSidebar } =
-    useSidebar(sidebarRef)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const Drawer = ({ children }: any) => {
+  const drawerRef = useRef(null)
+  const { resize } = useSidebar(drawerRef)
 
   return (
-    <aside ref={sidebarRef} className={`drawer ${!isSidebarOpen ? 'closed' : ''}`}>
-      <div className='resize-area' onMouseDown={resizeSidebar}>
-        <div className='handle' />
-      </div>
-    </aside>
+    <section role='dialog' className='backdrop'>
+      <aside ref={drawerRef} className='drawer'>
+        <div className='resize-area' onMouseDown={resize}>
+          <div className='handle' />
+        </div>
+        {children}
+      </aside>
+    </section>
   )
 }

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.5.0",
   "type": "module",
-  "license": "MIT License",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
