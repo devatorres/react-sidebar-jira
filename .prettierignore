@@ -1,6 +1,5 @@
-# Ignore artifacts:
-build
-coverage
-
-# Ignore all HTML files:
-*.html
+.yarn
+dist
+node_modules
+.gitlab-ci.yml
+CHANGELOG.md
